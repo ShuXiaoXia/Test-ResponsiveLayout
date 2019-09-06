@@ -1,12 +1,14 @@
-html{
-    box-sizing:border-box;
--moz-box-sizing:border-box; 
--webkit-box-sizing:border-box;
-font-size: 100px;
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 100px;
 }
+
 body {
+    min-width: 768px;
     color: #000;
-    background: #eee;
+    background: #f9f9f9;
     padding: 0;
 }
 
@@ -49,24 +51,24 @@ p {
     height: 1.1rem;
     margin: 0 auto;
     border: none;
-    background-color: #eee;
-    border-color: #eee;
+
 }
 
 .navbar-brand {
-    padding: 0.1rem 0;
+
+    padding-left: 0;
     margin-right: 0.24rem;
 }
 
-.navbar-collapse.collapse {
+.navbar-brand img {
+    height: 0.8rem;
+}
 
+.collapse {
     display: inline-block !important;
 }
 
-.navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
-}
+
 
 .active {
     color: #2b9eda !important;
@@ -74,7 +76,6 @@ p {
 
 .nav-list {
     margin: 0 0.2rem;
-    background-color: #eee;
 }
 
 .nav-list:first-child {
@@ -88,49 +89,16 @@ p {
     padding: 0;
     line-height: 1.1rem;
     z-index: 999;
-    background-color: #eee;
+
 }
 
+.nav>li>a:focus,
 .nav>li>a:hover {
-    background: none;
+    color: #0074b1;
+    background: none !important;
 }
 
-.nav-language {
-    float: right;
-    height: 1.1rem;
-    line-height: 1.1rem;
-    background-color: #eee;
-}
 
-.nav-language>img {
-    margin-left: 0.08rem;
-}
-
-.nav-language>button {
-    background: none;
-    border: none;
-}
-
-.dropdown-menu {
-    position: absolute;
-    left: -110%;
-    top: 0.88rem;
-}
-
-.dropdown-menu>li {
-
-    font-size: 0.16rem;
-    height: 0.36rem;
-    margin: 0.05rem auto;
-}
-
-.navbar-toggle {
-    border-color: #2b9eda;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: #2b9eda;
-}
 
 /* banner */
 
@@ -152,41 +120,51 @@ p {
 
 /* introduce */
 .introduce-wrapper {
-    width: 1200px;
-    margin: 0.8rem auto 0 auto;
-    background: #ccc;
-    text-align: center;
-    padding: 10% 10%;
+    margin: 0.6rem auto 0 auto;
+    padding: 0.5rem 0;
+    background-image: url(../picture/bg-aboutus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #042c9b;
 }
 
-.introduce-wrapper>p {
+.introduce-top {
+    margin: 0 auto;
+    padding: 0 1rem 0.4rem 1rem;
+    width: 1200px;
+    text-align: center;
+}
+
+.introduce-top>p {
     font-size: 0.2rem;
 }
 
-/* advantage */
-.advantage-top {
+.introduce-bottom {
     width: 1200px;
     margin: 0 auto;
-    margin-top: 0.75rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
 }
 
-.advantage-top>div {
-    width: 2.24rem;
-    height: 2.48rem;
+.introduce-bottom>div {
+    width: 1.5rem;
+    height: 1.5rem;
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:75%;
+    background-size: 75%;
 }
-.advantage-top>div:hover {
-    width: 2.24rem;
-    height: 2.48rem;
+
+.introduce-bottom>div:hover {
+    width: 1.5rem;
+    height: 1.5rem;
     background-size: contain;
 }
+
+/* advantage */
+
 .img1 {
     background-image: url("../picture/normal/now.png")
 }
@@ -268,39 +246,39 @@ p {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
- background-size: contain;
+    background-size: contain;
 }
 
 .img-1 {
-    background-image: url("../picture/transport.png")
+    background-image: url("../picture/advantage/transport.png")
 }
 
 .ab-list:hover>.img-1 {
-    background-image: url("../picture/transport2.png")
+    background-image: url("../picture/advantage/transport2.png")
 }
 
 .img-2 {
-    background-image: url("../picture/safe.png")
+    background-image: url("../picture/advantage/safe.png")
 }
 
 .ab-list:hover>.img-2 {
-    background-image: url("../picture/safe2.png")
+    background-image: url("../picture/advantage/safe2.png")
 }
 
 .img-3 {
-    background-image: url("../picture/24.png")
+    background-image: url("../picture/advantage/24.png")
 }
 
 .ab-list:hover>.img-3 {
-    background-image: url("../picture/242.png")
+    background-image: url("../picture/advantage/242.png")
 }
 
 .img-4 {
-    background-image: url("../picture/online.png")
+    background-image: url("../picture/advantage/online.png")
 }
 
 .ab-list:hover>.img-4 {
-    background-image: url("../picture/online2.png")
+    background-image: url("../picture/advantage/online2.png")
 }
 
 .ab-detail {
@@ -355,7 +333,7 @@ p {
 
 .news-content img {
     width: 2.5rem;
-    height: 1.13rem;
+    height: 1.9rem;
 }
 
 .news-list {
@@ -507,7 +485,8 @@ p {
     .header-wrapper,
     .navbar-style,
     .introduce-wrapper,
-    .advantage-top,
+    .introduce-top,
+    .introduce-bottom,
     .advantage-caption,
     .advantage-bottom,
     .news,
@@ -517,16 +496,44 @@ p {
         width: 800px;
     }
 
+
     .navbar-brand {
         display: none;
     }
 
-    .nav-list {
-        margin: 0 0.14rem;
+    .ab-list {
+        margin: 0 auto 0.2rem auto;
+    }
+
+    .ab-list>div {
+        width: 0.8rem;
+        height: 0.8rem;
     }
 
     .news {
         justify-content: space-around;
+    }
+
+    .news-box {
+        width: 2.3rem;
+    }
+
+    .news-title {
+        width: 2rem;
+        margin: 0.1rem 0;
+    }
+
+    .news-content {
+        width: 2rem;
+    }
+
+    .news-content img {
+        width: 2rem;
+        height: 1.4rem;
+    }
+
+    .news-list {
+        display: none;
     }
 
     .footer-top-menu {
@@ -550,7 +557,8 @@ p {
     .header-wrapper,
     .navbar-style,
     .introduce-wrapper,
-    .advantage-top,
+    .introduce-top,
+    .introduce-bottom,
     .advantage-caption,
     .advantage-bottom,
     .news,
@@ -559,10 +567,12 @@ p {
     .transport {
         width: 760px;
     }
-
-    .navbar-brand {
-        display: none;
+    .nav li{
+        display: inline-block !important;
     }
+    /* .navbar-brand {
+        display: none;
+    } 
 
     .news {
         justify-content: space-around;
@@ -576,8 +586,8 @@ p {
     .footer-top-contact {
         background: none;
     }
-
-    .carousel-indicators li,
+*/
+    /* .carousel-indicators li,
     .carousel-indicators .active {
         width: 0.3rem;
         height: 0.3rem;
@@ -589,130 +599,5 @@ p {
     .carousel-indicators .active {
         border: 0.02rem solid rgb(252, 193, 0);
         background-color: rgb(252, 193, 0);
-    }
-}
-
-@media (max-width:767px) {
-    html {
-        font-size: 60px;
-    }
-
-    .header-wrapper,
-    .navbar-style,
-    .introduce-wrapper,
-    .advantage-top,
-    .advantage-caption,
-    .advantage-bottom,
-    .news,
-    .partner-list,
-    .footer-top,
-    .tele,
-    .transport {
-        width: 90%;
-    }
-
-    .navbar-header {
-        display: inline-block;
-    }
-
-    .navbar-collapse {
-        margin-top: 0.05rem;
-        border-top-width: 0.02rem;
-        border-top-color: #fff;
-    }
-    .nav-language {
-        margin: 0;
-        padding: 0;
-        float: right;
-        height: auto;
-        line-height: 0.6rem;
-    }
-
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-
-    .collapse.in {
-        display: block !important;
-    }
-
-    .navbar-brand,
-    .footer-top-menu {
-        display: none;
-    }
-
-    .navbar-style {
-        height: 0.7rem;
-    }
-
-    .navbar-toggle {
-        top: 0.1rem;
-        float: left;
-    }
-    .navbar-nav{
-        margin:0;
-    }
-    .nav-list,
-    .nav-list:first-child {
-        margin: 0;
-    }
-
-    .nav>li>a {
-        padding: 0 0.5rem;
-        line-height: 300%;
-    }
-
-    .nav>li>a:hover {
-        background: #ddd;
-    }
-
-    .carousel-indicators li,
-    .carousel-indicators .active {
-        width: 0.1rem;
-        height: 0.1rem;
-        border: 0.005rem solid #fff;
-        margin: 0 0.005rem;
-    }
-
-    .carousel-indicators .active {
-        border: 0.005rem solid rgb(252, 193, 0);
-    }
-
-    .introduce-wrapper,
-    .advantage-caption.advantage-bottom {
-        margin: 0.15rem auto;
-    }
-
-
-    /* .ab-list {
-        width: 1.3rem;
-        margin: 0.1rem 0.1rem;
     } */
-
-    .ab-list>p {
-        margin: 0.1rem auto;
-    }
-
-    .news {
-        justify-content: space-around;
-    }
-
-    .footer-top {
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
-    }
-
-    .footer-top-menu {
-        padding: 0.5rem;
-        margin-bottom: 0.4rem;
-    }
-
-    .footer-top-contact {
-        background: none;
-    }
-
-    .transport>p {
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-    }
 }
