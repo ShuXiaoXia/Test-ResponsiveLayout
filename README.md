@@ -3,8 +3,8 @@ Practice on Responsive Layout of Web Pages
 
 设定HTML最小固宽： min-width: 768px
 设定的兼容视图宽度设定：
-@media (max-width:1200px) {}
-@media (max-width:980px) {}
+@media (max-width:1200px)
+@media (max-width:980px)
 
 以大于1200px的宽度，创建CSS，再向小兼容；
 单位部分使用rem相对单位；
